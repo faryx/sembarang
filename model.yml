@@ -1,0 +1,112 @@
+providers:
+  kenari:
+    baseUrl: https://kenari.id/v1
+    apiKey: kn-51b0529fea46480ce10f4b3000c819efae6fa0046e1c50b3
+    api: openai-completions
+    authHeader: true
+    models:
+      - id: deepseek-v4-1-flash
+        name: Deepseek v4.1 Flash
+        api: openai-completions
+        reasoning: true
+        input: [text, image]
+        contextWindow: 1000000
+        maxTokens: 1000000
+        thinking:
+          mode: effort
+          efforts: [low, high, max]
+          defaultLevel: max
+        compat:
+          stripImageInput: false
+
+      - id: glm-5-3-flash
+        name: GLM 5.3 Flash
+        api: openai-completions
+        reasoning: true
+        input: [text, image]
+        contextWindow: 1000000
+        maxTokens: 1000000
+        thinking:
+          mode: effort
+          efforts: [low, high, max]
+          defaultLevel: high
+
+      - id: claude-haiku-5-5
+        name: claude-haiku-5-5
+        api: openai-completions
+        reasoning: true
+        input: [text, image]
+        contextWindow: 1000000
+        maxTokens: 1000000
+        thinking:
+          mode: effort
+          efforts: [minimal, low, medium, high, xhigh]
+          defaultLevel: xhigh
+
+  notfaryx:
+    baseUrl: http://localhost:20128/v1
+    apiKey: sk-fdab9bb0721d64e7-1vw7q3-cf13477e
+    api: openai-completions
+    authHeader: true
+    models:
+      - id: FAR
+        name: FAR
+        api: openai-completions
+        reasoning: true
+        input: [text, image]
+        contextWindow: 1000000
+        maxTokens: 1000000
+        thinking:
+          mode: effort
+          efforts: [low, medium, high, xhigh]
+          defaultLevel: xhigh
+        compat:
+          supportsReasoningEffort: true
+
+      - id: AG
+        name: AG
+        api: openai-completions
+        reasoning: true
+        input: [text, image]
+        contextWindow: 1000000
+        maxTokens: 1000000
+        thinking:
+          mode: effort
+          efforts: [low, medium, high, xhigh]
+          defaultLevel: xhigh
+        compat:
+          supportsReasoningEffort: true
+
+  tokenharbor:
+    baseUrl: https://tokenharbor.ai/v1
+    apiKey: thk_live_zWEDjOo93jdowIlVgdO0VbL_4z6141RCFbmCy717FhQ7eH-UGz7TXX5hLTxFxgGC
+    api: openai-completions
+    authHeader: true
+    models:
+      - id: claude-haiku-5.5
+        name: claude-haiku-5.5
+        api: openai-completions
+        reasoning: true
+        input: [text, image]
+        contextWindow: 1000000
+        maxTokens: 1000000
+        thinking:
+          mode: effort
+          efforts: [low, medium, high, xhigh]
+          defaultLevel: xhigh
+        compat:
+          supportsReasoningEffort: true
+
+      - id: claude-haiku-5.5:free
+        name: claude-haiku-5.5:free
+        api: openai-completions
+        reasoning: true
+        input: [text, image]
+        contextWindow: 1000000
+        maxTokens: 1000000
+        thinking:
+          mode: effort
+          efforts: [low, medium, high, xhigh]
+          defaultLevel: xhigh
+        compat:
+          supportsReasoningEffort: true
